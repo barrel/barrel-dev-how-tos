@@ -16,6 +16,11 @@
 	
 *	**Another Entry**
 
+*	**Embedding An Image**
+	
+	Each image should be accompanied by title text.
+
+	![Test Image](images/test-image.jpg)
 
 ## Resources
 
