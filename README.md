@@ -1,4 +1,9 @@
-barrel-dev-how-tos
+Barrel Development How-Tos
 ==================
 
-Living documentation of frequently repeated development and sys admin tasks.
+### List of tutorials
+
+- [CDNs](cdns.md)
+- [WordPress Permissions](wordpress-permissions.md)
+
+[Formatting Guidelines](formatting-guidelines.md) for this document.
