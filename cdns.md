@@ -93,8 +93,7 @@ This is a command line tool that allows us to recursively set headers for S3 con
   - Path to GPG program: Run "which gpg" in a different terminal window as paste the result*
   - Use HTTPS protocol: I selected "No" but this is up for debate
   - Proxy settings are left blank
-
-5. With the S3 tool now set up, you can use it to alter header values for selected S3 buckets. The following command adds or alters the Cache-Control:max-age with a value of 1 day, or 86400 seconds. This is how long CloudFront will cache the asset before contacting the origin again for a new version of the asset. 86400 is used here as an example. We will need to decide on an appropriate value internally. Note: WebPageTest provides a warning for any values under 2592000, or 30 days.
+With the S3 tool now set up, you can use it to alter header values for selected S3 buckets. The following command adds or alters the Cache-Control:max-age with a value of 1 day, or 86400 seconds. This is how long CloudFront will cache the asset before contacting the origin again for a new version of the asset. 86400 is used here as an example. We will need to decide on an appropriate value internally. Note: WebPageTest provides a warning for any values under 2592000, or 30 days.
 
 *if command ```which gpg``` returns nothing, you will need to download the gpg program at (gpgtools.org)[https://gpgtools.org]
 
