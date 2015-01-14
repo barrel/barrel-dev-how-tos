@@ -85,10 +85,10 @@ In order to setup access for both S3 and the [S3Tools command line client](https
 
 #### S3Tools
 This is a command line tool that allows us to recursively set headers for S3 content (among other actions). We will use it here to set Cache-Control:max-age headers for all content uploaded. Cloudfront does not override the response headers for content stored on S3 (or other origins) so it's necessary to set these directly on S3. This tool allows use to do this efficiently.
-1. Download a ZIP of the [S3Tools Repo](https://github.com/s3tools/s3cmd).
-2. cd to the unzipped root directory of the download.
-3. Install the tool with ```sudo python setup.py install```.
-4. run s3cmd --configure with the following settings (You may choose to change these for you own setup. Note: AWS credentials can be set as environmental variables which is a more adaptable way of setting these details but it does require a number of extra steps)
+  1. Download a ZIP of the [S3Tools Repo](https://github.com/s3tools/s3cmd).
+  2. cd to the unzipped root directory of the download.
+  3. Install the tool with ```sudo python setup.py install```.
+  4. run s3cmd --configure with the following settings (You may choose to change these for you own setup. Note: AWS credentials can be set as environmental variables which is a more adaptable way of setting these details but it does require a number of extra steps)
   - Encryption password: Set your own password
   - Path to GPG program: Run "which gpg" in a different terminal window as paste the result*
   - Use HTTPS protocol: I selected "No" but this is up for debate
