@@ -89,10 +89,10 @@ This is a command line tool that allows us to recursively set headers for S3 con
   2. cd to the unzipped root directory of the download.
   3. Install the tool with ```sudo python setup.py install```.
   4. run s3cmd --configure with the following settings (You may choose to change these for you own setup. Note: AWS credentials can be set as environmental variables which is a more adaptable way of setting these details but it does require a number of extra steps)
-  - Encryption password: Set your own password
-  - Path to GPG program: Run "which gpg" in a different terminal window as paste the result*
-  - Use HTTPS protocol: I selected "No" but this is up for debate
-  - Proxy settings are left blank
+    - Encryption password: Set your own password
+    - Path to GPG program: Run "which gpg" in a different terminal window as paste the result*
+    - Use HTTPS protocol: I selected "No" but this is up for debate
+    - Proxy settings are left blank
 
 With the S3 tool now set up, you can use it to alter header values for selected S3 buckets. The following command adds or alters the Cache-Control:max-age with a value of 1 day, or 86400 seconds. This is how long CloudFront will cache the asset before contacting the origin again for a new version of the asset. 86400 is used here as an example. We will need to decide on an appropriate value internally. Note: WebPageTest provides a warning for any values under 2592000, or 30 days.
 
