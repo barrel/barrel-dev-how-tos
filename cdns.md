@@ -7,7 +7,7 @@ CDN Tutorials
 - [Integration](#Integration)
 
 ### CloudFront
-The list below outlines a basic workflow to set up a CloundFront CDN, using S3 and W3 Total Cache
+The steps below outlines a basic workflow to set up a CloundFront CDN, using S3 and W3 Total Cache
 
 #### AWS User setup. 
 In order to setup access for both S3 and the [S3Tools command line client](https://github.com/s3tools/s3cmd), we need to supply both installations with credentials; an Access Key ID and a Secret Access Key. Rather than using the keys attached to the root user of the AWS account, it's preferable to create a new AIM user with restricted access. To do this, follow the following steps:
@@ -95,7 +95,7 @@ This is a command line tool that allows us to recursively set headers for S3 con
   - Proxy settings are left blank
 5. With the S3 tool now set up, you can use it to alter header values for selected S3 buckets. The following command adds or alters the Cache-Control:max-age with a value of 1 day, or 86400 seconds. This is how long CloudFront will cache the asset before contacting the origin again for a new version of the asset. 86400 is used here as an example. We will need to decide on an appropriate value internally. Note: WebPageTest provides a warning for any values under 2592000, or 30 days.
 
-*if comman which gpg returns nothing, you will need to download the gpg program at (gpgtools.org)[https://gpgtools.org]
+*if command ```which gpg``` returns nothing, you will need to download the gpg program at (gpgtools.org)[https://gpgtools.org]
 
 
 ### Provisioning
