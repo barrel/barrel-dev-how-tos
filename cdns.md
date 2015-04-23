@@ -3,11 +3,15 @@
 CDN Tutorials
 ------------------
 - [CloudFront](#cloudfront)
+- [Invalidation](#invalidation)
 - [Provisioning](#provisioning)
 - [Integration](#Integration)
 
 ### CloudFront
 The steps below outlines a basic workflow to set up a CloundFront CDN, using S3 and W3 Total Cache
+
+#### Invalidation
+Before proceeding with this setup it's important to note that CloudFront object invalidations can become costly. This method of integrating W3TC with CloudFront gives the plugin full control of your CloudFront distributions making it much easier to invalidate objects. This is recommended as invalidating objects in a CloudFront distribution can be very tedious, and will mostly likely be confusing for novice AWS users. However, keep in mind that only the first 1000 invalidations are free, and after that invalidations are charged at $0.005 per object. If the client has hundreds or thousands of objects being hosted on CloudFront, you may want to consider an alternative implementation such as the following: http://www.bloggingguts.com/amazon-cloudfront-cdn-wordpress/
 
 #### AWS User setup. 
 In order to setup access for both S3 and the [S3Tools command line client](https://github.com/s3tools/s3cmd), we need to supply both installations with credentials; an Access Key ID and a Secret Access Key. Rather than using the keys attached to the root user of the AWS account, it's preferable to create a new AIM user with restricted access. To do this, follow the following steps:
