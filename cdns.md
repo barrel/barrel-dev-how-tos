@@ -15,9 +15,11 @@ Before proceeding with this setup it's important to note that CloudFront object 
 
 #### AWS User setup. 
 In order to setup access for both S3 and the [S3Tools command line client](https://github.com/s3tools/s3cmd), we need to supply both installations with credentials; an Access Key ID and a Secret Access Key. Rather than using the keys attached to the root user of the AWS account, it's preferable to create a new AIM user with restricted access. To do this, follow the following steps:
+
 1. Login to the [AWS Console](https://console.aws.amazon.com) and [Create a new user](https://console.aws.amazon.com/iam/home).
 2. Download the two keys attached to this user and save them in a secure location. Note: This is the only time you will be provided with the Secret Access Key.
 3. Attach a user policy to the user under the "Permissions" tab. This allows access to a specified S3 bucket. We use policy statements to specifically set user permissions settings. The code below provides a user access to <bucket> while also allowing the user to view all buckets attached to this account. This second statement is necessary for W3 Total Cache and S3Tools. Once the statements have been added, save all changes.
+
 ```javascript 
 {
   "Version": "2012-10-17",
